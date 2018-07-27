@@ -38,7 +38,7 @@ class AccessDbProperties {
      * It is set to the 'Database user' field when a user select this database type.
      */
     String getUser() {
-        return 'sa'
+        return ''
     }
 
     /**
@@ -47,21 +47,23 @@ class AccessDbProperties {
      * It is set to the 'Database password' field when a user select this database type.
      */
     String getPassword() {
-        return 'saPass1'
+        return ''
     }
 
     /**
      * Fully qualified name of the JDBC driver.
      */
     String getDriver() {
-        return 'net.sourceforge.jtds.jdbc.Driver'
+        // return 'net.sourceforge.jtds.jdbc.Driver'
+        return 'net.ucanaccess.jdbc.UcanaccessDriver'
     }
 
     /**
      * Starting part of JDBC connection URL connection before host.
      */
     String getUrlPrefix() {
-        return 'jdbc:jtds:sqlserver://'
+        // return 'jdbc:jtds:sqlserver://'
+        return 'jdbc:ucanaccess://'
     }
 
     /**
@@ -75,7 +77,8 @@ class AccessDbProperties {
      * </ul>
      */
     String getJdbcDriverDependency() {
-        return 'net.sourceforge.jtds:jtds:1.3.1'
+        // return 'net.sourceforge.jtds:jtds:1.3.1'
+        return 'net.sf.ucanaccess:ucanaccess:4.0.4'
     }
 
     /**
@@ -179,7 +182,8 @@ class AccessDbProperties {
      * @return connection URL
      */
     String getMasterUrl(String host, String dbName, String connectionParams) {
-        return "jdbc:jtds:sqlserver://$host/master$connectionParams"
+        // return "jdbc:jtds:sqlserver://$host/master$connectionParams"
+        return "jdbc:ucanaccess://$host/master$connectionParams"
     }
 
     /**
@@ -189,7 +193,8 @@ class AccessDbProperties {
      * @return true if the URL corresponds to this database type
      */
     boolean isSuitableUrl(String url) {
-        return url.startsWith("jdbc:jtds:sqlserver:")
+        // return url.startsWith("jdbc:jtds:sqlserver:")
+        return url.startsWith("jdbc:ucanaccess:")
     }
 
     /**
