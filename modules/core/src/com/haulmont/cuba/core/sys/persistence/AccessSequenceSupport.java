@@ -3,7 +3,7 @@ package com.haulmont.cuba.core.sys.persistence;
 /**
  * SequenceSupport implementation for Microsoft Access.
  */
-// TODO this is an auto-generated sample suitable for MS SQLServer
+// TODO: MS ACCESS doesn't support sequences. So trowing exceptions so far. PASS 1 - a stub that throws exceptions
 @SuppressWarnings("unused")
 public class AccessSequenceSupport implements SequenceSupport {
 

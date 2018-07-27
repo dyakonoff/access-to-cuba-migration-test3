@@ -7,7 +7,7 @@ import java.util.UUID;
 /**
  * DbTypeConverter implementation for Microsoft Access.
  */
-// TODO this is an auto-generated sample suitable for MS SQLServer
+// TODO: Fix type conversion for MS ACCESS
 @SuppressWarnings("unused")
 public class AccessDbTypeConverter implements DbTypeConverter {
 
